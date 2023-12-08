@@ -25,6 +25,11 @@ class Theme_Support {
         add_theme_support( 'customize-selective-refresh-widgets' );
 
         /**
+         * Load theme text-domain
+         */
+        load_theme_textdomain( 'text-domain', THEME_DIR_PATH . '/languages' );
+
+        /**
          * Support Custom Logo
          */
         add_theme_support( 'custom-logo', [
