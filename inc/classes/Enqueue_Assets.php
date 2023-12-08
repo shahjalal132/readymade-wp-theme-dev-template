@@ -15,10 +15,19 @@ class Enqueue_Assets {
     }
 
     public function enqueue_css() {
+        // Register Style
+        wp_register_style( "handle", dir . "src", [deps], version, "all" );
+
+        // Enqueue Style
+        wp_enqueue_style( "handle" );
 
     }
 
     public function enqueue_js() {
+        // Register scripts
+        wp_register_script( "handle", dir . "src", [deps], version, true );
 
+        // Enqueue Script
+        wp_enqueue_script( "handle" );
     }
 }
