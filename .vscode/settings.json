@@ -1,9 +1,12 @@
 {
-    "editor.inlineSuggest.showToolbar": "onHover",
+    "editor.inlineSuggest.showToolbar": "always",
     "cSpell.words": [
         "autoloaded",
         "Autoloader",
         "Autoloads",
-        "jalal"
+        "jalal",
+        "metabox",
+        "Metabox",
+        "Metadata"
     ]
 }
