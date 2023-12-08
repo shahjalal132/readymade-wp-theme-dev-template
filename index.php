@@ -1,3 +1,9 @@
+<?php 
+/**
+ * Main Blog Template
+ */
+?>
+
 <?php get_header()?>
 
 

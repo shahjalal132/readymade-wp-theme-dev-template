@@ -17,8 +17,12 @@ class Theme_Support {
     public function theme_support() {
         // Theme Support
         add_theme_support( 'title-tag' );
+        add_theme_support( 'align-wide' );
+        add_theme_support( 'woocommerce' );
+        add_theme_support( 'editor-styles' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
         /**
          * Support Custom Logo
@@ -44,5 +48,41 @@ class Theme_Support {
             'style',
             'script',
         ] );
+
+        /**
+         * Support Post format
+         */
+
+        add_theme_support( 'post-formats', [
+            'aside',
+            'gallery',
+            'audio',
+            'video',
+            'quote',
+        ] );
+
+        /**
+         * Support Editor style for gutenberg editor
+         */
+        add_editor_style();
+
+        /**
+         * Support Custom background
+         */
+
+        add_theme_support( 'custom-background', [
+            'default-image'  => '',
+            'default-color'  => '#ffffff',
+            'default-repeat' => 'no-repeat',
+        ] );
+
+        /**
+         * Global content width set 1200 px
+         * it will be apply to container
+         */
+        global $content_width;
+        if ( !isset( $content_width ) ) {
+            $content_width = 1200;
+        }
     }
 }
